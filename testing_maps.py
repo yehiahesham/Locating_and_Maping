@@ -1,36 +1,53 @@
 import googlemaps
 import json
 from pprint import pprint
+import sys
+
+mykey=''
+gmaps = googlemaps.Client(key=mykey)
+
+def yehia ():
+    print 'hello'
 
 
-
-gmaps = googlemaps.Client(key='')
-my_distance= gmaps.distance_matrix(
-'New Cairo City,Cairo Governorate',
-'Sheraton, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate')
-cool_variable = my_distance['rows'][0]['elements'][0]
-dur= cool_variable['duration']['text']
-dis=cool_variable['distance']['text']
-print ("Distance is "+ dis)
-print ("duration is "+ dur)
+def distance_matrix(source,distination):
+    global gmaps
+    my_distance=  gmaps.distance_matrix(distination,source)
+    return my_distance['rows'][0]['elements'][0]['distance']['text'],my_distance['rows'][0]['elements'][0]['duration']['text']
 
 
-#jsonResponse=json.loads(my_distance)
-#jsonData = jsonResponse["rows"]
-#for item in jsonData:
-#    dis = item.get("distance")
-#    dur = item.get("duration")
-#    print dis + dur
+def getadress(Latlng): #returns address
+    global gmaps
+    my_address=gmaps.reverse_geocode(Latlng)
+    print my_address
+    for data in my_address:
+        print "\n ---------- address ---------- "
+        for address in data['address_components']:
+             sys.stdout.write(address['short_name']+' ')
+    print "\n"
 
-#result= json.loads(my_distance)
-#print (result['rows'])
-#print my_distance[u'rows'][0]
-#with open('data.json', 'w') as outfile:
-#    json.dump(my_distance, outfile)
-#with open('data.json') as data_file:
-#    data = json.load(data_file)
+def PlaceDetails(Latlng):
+    global gmaps
+    my_place=gmaps.places(Latlng)
+    print my_place
 
-#print "Source is "
-#pprint(data[u'origin_addresses'][0])
-#print "Destination is "
-#pprint(data[u'destination_addresses'][0] +data[u'destination_addresses'][0])
+
+def getLatlng(addr): #returns Latlng
+    global gmaps
+    my_longlat= gmaps.geocode(addr)
+    return  my_longlat[0]['geometry']['location']['lat'],my_longlat[0]['geometry']['location']['lng']
+
+
+if __name__ == "__main__":
+    source='30.019200, 31.502364'
+    distination='29.988083, 31.441536'
+
+#    dis,dur=distance_matrix(source,distination)
+    lat,lng =getLatlng('Facebook HQ, Hacker Way, Menlo Park, CA, United States')
+    x=str(lat)+','+str(lng)
+    getadress(x)
+    PlaceDetails(x)
+
+#    print ("Distance is "+ dis)
+#    print ("duration is "+ dur)
+    print "Latlng is : %f ,%f " % (lat, lng)
