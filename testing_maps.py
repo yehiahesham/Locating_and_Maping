@@ -1,5 +1,4 @@
 import googlemaps
-import json
 from pprint import pprint
 import sys
 from datetime import datetime
