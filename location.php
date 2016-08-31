@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-<!--EVERYTHING WORKS FOR OTHER PLATFORMS LIKE IPHONE,MAC,WIND,& LUNIX, BUT  FOR THE Android PHONES: YOU MUST OPEN YOU LOCATOR AND HTTPS THE REQUEST.-->
+<!--
+This HTML code pinpoint the user location using the HTML5 Geolocation API
+EVERYTHING WORKS FOR OTHER PLATFORMS LIKE IPHONE,MAC,WIND,& LUNIX, BUT  FOR THE Android PHONES: YOU MUST OPEN YOU LOCATOR AND HTTPS THE REQUEST.
+for reference check: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation or  http://www.w3schools.com/html/html5_geolocation.asp
+-->
 
 <p>Click the button to get your coordinates.</p>
 
@@ -45,4 +49,3 @@ function showError(error) {
 
 </body>
 </html>
-
