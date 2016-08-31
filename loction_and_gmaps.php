@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
-<!--EVERYTHING WORKS FOR OTHER PLATFORMS LIKE IPHONE,MAC,WIND,& LUNIX, BUT FOR THE Android PHONES: YOU MUST OPEN YOU LOCATOR AND HTTPS THE REQUEST + THE JAVA SCRIPT WOULDN'T WORK ON Android PHONES.-->
+
+<!--
+This HTML code pinpoint the user location using the HTML5 Geolocation API and maps it in a google map
+
+EVERYTHING WORKS FOR OTHER PLATFORMS LIKE IPHONE,MAC,WIND,& LUNIX, BUT  FOR THE Android PHONES: YOU MUST OPEN YOU LOCATOR AND HTTPS THE REQUEST.
+for reference check: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation or  http://www.w3schools.com/html/html5_geolocation.asp
+
+Also THE JAVA SCRIPT WOULDN'T WORK ON Android PHONES, because they don't support it. thus Android phones will fail to get the google map, unlike other platforms mentioned above
+-->
+
 
 <p id="demo">Click the button to get your position.</p>
 
