@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+<!-- FOR THE Android PHONES: YOU MUST OPEN YOU LOCATOR AND HTTPS THE REQUEST + THE JAVA SCRIPT WOULDN'T WORK ON Android PHONES. OTHERWISE EVVERYTHING WORKS FOR OTHER PLATFORMS LIKE IPHONE,MAC,WIND,& LUNIX-->
 
 <p id="demo">Click the button to get your position.</p>
 
@@ -8,7 +9,7 @@
 
 <div id="mapholder"></div>
 
-<script src="http://maps.google.com/maps/api/js?sensor=false&key="></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false&key=PUT_YOUR_KEY_HERE"></script>
 
 <script>
 var x = document.getElementById("demo");
