@@ -65,9 +65,10 @@ class DataBase:
 
 t= Tile38('127.0.0.1',9851)
 db= DataBase('localhost','user','','BioMedical_DB')
-c =  db.Select("SELECT ID, Name, Acc_Type, latitude, longitude FROM Accounts WHERE ID=2")
+c =  db.Select("SELECT ID, Name, Acc_Type, latitude, longitude FROM Accounts")
 for row in c:
 	name = row[1]
 	lat=row[3]
 	lng=row[4]
 	print t.Command('set fleet '+str(name.replace(" ", "_"))+' point '+str(lat)+' '+str(lng))
+print t.Command('nearby fleet point 33.462 -112.268 6000')
