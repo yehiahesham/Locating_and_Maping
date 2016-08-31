@@ -23,7 +23,7 @@ class Tile38:
 			self.port = port
 		self.url= str( self.IP)+":"+str(self.port)
 
-	def Command(self,command, IP=None , port=None ):
+	def Command(self,command):
 		'''
 		This function  acts like the tile38-cli sending commands to the  server
 			:param command: is a command that will be passed to the Tile38 server who will executed it , Check commands at: tile38.com/commands/
