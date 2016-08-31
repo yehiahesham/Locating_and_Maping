@@ -127,6 +127,7 @@ class Py_GOOGLE_MAPS_API:
     #Retruns a Copy of the constructed object, to have dupilcates if desired instead of constructing a new object
         return self
 
+#syntax example
 
 p= Py_GOOGLE_MAPS_API('PUT_YOUR_KEY_HERE')
 print p.distance_matrix('37.419356, -122.093706','37.421899, -122.084147',mode="bicycling",departure_time=datetime.now())
