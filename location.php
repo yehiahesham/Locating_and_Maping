@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+<!--EVERYTHING WORKS FOR OTHER PLATFORMS LIKE IPHONE,MAC,WIND,& LUNIX, BUT  FOR THE Android PHONES: YOU MUST OPEN YOU LOCATOR AND HTTPS THE REQUEST.-->
 
 <p>Click the button to get your coordinates.</p>
 
