@@ -1,6 +1,6 @@
 # Python_Wrapper_GoogleMapsAPI
 
-This python file has one wrapper class for the Python Google API. 
+A Python wrapper class for the Python Google API. 
 
 The wrapper is called Py_GOOGLE_MAPS_API.
 
