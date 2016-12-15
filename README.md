@@ -1,7 +1,27 @@
 # Python_Wrapper_GoogleMapsAPI
 
+This python file has one wrapper class for the Python Google API. 
 
- Screenshot:
+The wrapper is called Py_GOOGLE_MAPS_API.
+
+Dependencies:
+
+      ●	  Install the googlemaps python pkg 
+
+      ●	  Google Maps API key 
+
+      ●	  Importing  googlemaps
+
+      ●	  Importing sys lib
+
+      ●	  from datetime  , datetime lib
+
+      ●	  Importing time lib
+
+
+
+
+ Screenshots:
  
  Test 1
  
